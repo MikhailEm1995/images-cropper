@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Image Crop</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.min.css">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <div id="imageCropper" class="image-cropper" data-element="app">
+            <div class="image-cropper__container" data-element="container">
+                <img src="" class="image-cropper__image" alt="Please, upload a photo" data-element="image">
+                <div class="image-cropper__preloader" data-element="preloader">
+                    <div class="image-cropper__spinner"></div>
+                </div>
+                <div class="image-cropper__notifications" data-element="notifications"></div>
+            </div>
+            <div class="image-cropper__controls" data-element="controls">
+                <label class="image-cropper__button image-cropper__button--blue" tabindex="1">
+                    Upload
+                    <input
+                        type="file"
+                        accept="image/jpeg, image/png, image/pjpeg, image/webp, image/svg+xml"
+                        class="image-cropper__hidden-input"
+                        data-element="upload"
+                    />
+                </label>
+                <div>
+                    <label class="image-cropper__input" tabindex="1">
+                        <input type="number" placeholder="Max width" class="image-cropper__input-field" data-element="maxWidth">
+                    </label>
+                    <label class="image-cropper__input" tabindex="1">
+                        <input type="number" placeholder="Max height" class="image-cropper__input-field" data-element="maxHeight">
+                    </label>
+                    <button class="image-cropper__button image-cropper__button--red" data-element="isRect">Rectangle</button>
+                    <button class="image-cropper__button image-cropper__button--yellow" data-element="isEllipse">Ellipse</button>
+                </div>
+                <button class="image-cropper__button image-cropper__button--big image-cropper__button--green" data-element="save">Save</button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.min.js"></script>
+        <script defer src="./utils.js"></script>
+        <script defer src="./elements.js"></script>
+        <script defer src="./handlers.js"></script>
+        <script defer src="./index.js"></script>
+    </body>
+</html>
